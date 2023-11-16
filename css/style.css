@@ -43,6 +43,11 @@ header img {
   width: 50px;
 }
 
+#select-level {
+  padding: 0px 20px;
+  background-color: #e9e9ed;
+}
+
 /*
 MAIN
 */
