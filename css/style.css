@@ -55,21 +55,34 @@ main {
 }
 
 .table {
-  width: 500px;
-  height: 500px;
+  width: 700px;
+  height: 700px;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
 }
 
 .cell {
-  width: calc(100% / 10);
-  height: calc(100% / 10);
   background-color: #7fffd4;
   border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.cell-100 {
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+}
+
+.cell-81 {
+  width: calc(100% / 9);
+  height: calc(100% / 9);
+}
+
+.cell-49 {
+  width: calc(100% / 7);
+  height: calc(100% / 7);
 }
 /*
 FOOTER
