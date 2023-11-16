@@ -1,6 +1,8 @@
 'use strict';
 
-//funzione
+/*
+FUNZIONI
+*/
 function myCreateElement(tag, className, content) {
   const element = document.createElement(tag);
   element.classList.add(className);
@@ -9,12 +11,45 @@ function myCreateElement(tag, className, content) {
   return element;
 }
 
-//variabili
-const table = document.querySelector('.table');
-const generaGriglia = document.getElementById('generaGriglia');
+function setCellNumber(level) {
+  let cellNumber;
+  switch (level) {
+    case 2:
+      cellNumber = 81;
+      break;
 
-//ciclo
-for (let i = 1; i <= 100; i++) {
-  const myElement = myCreateElement('div', 'cell', i);
-  table.append(myElement);
+    case 3:
+      cellNumber = 49;
+      break;
+
+    case 1:
+    default:
+      cellNumber = 100;
+      break;
+  }
+
+  return cellNumber;
 }
+
+function createTable(mainElement, cellNumber) {
+  const fragment = document.createDocumentFragment();
+  for (let i = 1; i <= cellNumber; i++) {
+    const myElement = myCreateElement('div', 'cell', i);
+    fragment.append(myElement);
+  }
+  mainElement.append(fragment);
+}
+
+function campoMinato() {
+  const table = document.querySelector('.table');
+  let level = 3;
+  const cellNumber = setCellNumber(level);
+  createTable(table, cellNumber);
+}
+
+/*
+VARIABILI GAME
+*/
+
+const generaGriglia = document.getElementById('generaGriglia');
+generaGriglia.addEventListener('click', campoMinato);
