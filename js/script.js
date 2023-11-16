@@ -32,9 +32,13 @@ function setCellNumber(level) {
 }
 
 function createTable(mainElement, cellNumber) {
+  const cells = Math.sqrt(cellNumber);
+
   const fragment = document.createDocumentFragment();
   for (let i = 1; i <= cellNumber; i++) {
     const myElement = myCreateElement('div', 'cell', i);
+    myElement.style.width = `calc(100% / ${cells})`;
+    myElement.style.height = myElement.style.width;
     fragment.append(myElement);
   }
   mainElement.append(fragment);
