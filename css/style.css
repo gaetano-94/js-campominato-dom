@@ -1,0 +1,83 @@
+/*
+RESET
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+COMMON
+*/
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+HEADER
+*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+.box-header {
+  display: flex;
+}
+
+header h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header button {
+  padding: 0px 25px;
+}
+
+header img {
+  width: 50px;
+}
+
+/*
+MAIN
+*/
+main {
+  flex-grow: 1;
+  background-color: #7fffd4;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.table {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.cell {
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+  background-color: #7fffd4;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*
+FOOTER
+*/
+footer {
+  padding: 5px 20px;
+  font-size: 13px;
+}
+/*
+UTILITY
+*/
