@@ -75,17 +75,17 @@ main {
   align-items: center;
 }
 
-.cell-100 {
+.cell-10 {
   width: calc(100% / 10);
   height: calc(100% / 10);
 }
 
-.cell-81 {
+.cell-9 {
   width: calc(100% / 9);
   height: calc(100% / 9);
 }
 
-.cell-49 {
+.cell-7 {
   width: calc(100% / 7);
   height: calc(100% / 7);
 }
